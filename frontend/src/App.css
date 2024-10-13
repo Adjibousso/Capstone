@@ -1,0 +1,151 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f72d9250; 
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+}
+.aware{
+  width: 70px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: rgb(18, 58, 236);
+  font-weight: bold;
+}
+
+.navbar-links a:hover {
+  color: #ff1493; /* Darker pink on hover */
+}
+
+.navbar-search {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-search input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+}
+
+.navbar-search button {
+  background-color: white;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.navbar-search button:hover {
+  background-color: #ff1493;
+  color: white;
+}
+.home-page {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.header {
+  background-color: #f8b4c0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.about-section, .support-section, .resources-section {
+  margin: 20px 0;
+  
+}
+.awareinfo{
+  width: 200px;
+  height: 200px;
+  align-items: start;
+  margin-right: 900px;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+a {
+  color: #d63384;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  margin-top: 20px;
+  font-size: 0.8em;
+  color: #555;
+}
+.containerInfo{
+  background-color: #ff14911f;
+  display: flex;
+  flex-direction: column;
+
+}
+.videoaware{
+ margin-left: 100px;
+ justify-content: space-around;
+ width: 800px;
+}
+.videoaware img{
+  margin-top: -500px;
+  margin-left: 500px;
+  border: #ff1493;
+  box-shadow: 5px 3px 3px 2px rgb(234, 77, 156);
+ }
+.displayV{
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  border: solid 1px rgb(205, 18, 114);
+  box-shadow: 5px 5px 5px 5px rgb(235, 109, 161);
+}
+.mediainfo{
+  display: block;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.bycountry img{
+width: 300px;
+height: 200px;
+border: 3px solid  rgb(14, 13, 13) ;
+box-shadow: 3px 4px 5px rgb(108, 14, 29);
+
+}
+.bycountry{
+  justify-content: space-between;
+  display: flex;
+  width: 1300px;
+}
+.afrikmedia{
+  
+  border-radius: 40%;
+}
