@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import afrik1 from "../assets/images/afrik1.jpg";
+import afrik6 from "../assets/images/afrik6.jpg";
 import lisca from "../assets/images/lisca.mp4"
 import ReactPlayer from "react-player";
 import afriStatic from "../assets/images/afriStatic.jpg"

@@ -6,12 +6,11 @@ import { FaRibbon, FaSearch } from 'react-icons/fa';
 import Home from "./pages/Home";
 import Register from './components/Register';
 import Cart from './pages/cart';
-import SignIn from './components/Signin';
+import Signin from './components/Signin';
 import Infos from "./pages/Info";
 import Asia from "./pages/Asia"
 import Afrique from "./pages/Afrique"
 import Shop from './pages/Shop';
-
 
 
 
@@ -25,7 +24,7 @@ function App() {
       <Navbar />
       
       <Routes>
-      <Route path="/signin" element={<SignIn/>} />
+      <Route path="/signin" element={<Signin/>} />
       <Route path="/register" element={<Register/>} />
         <Route path="/" element={<Home />} />
         <Route path="/Infos" element={<Infos />} />

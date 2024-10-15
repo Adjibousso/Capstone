@@ -149,3 +149,19 @@ box-shadow: 3px 4px 5px rgb(108, 14, 29);
   
   border-radius: 40%;
 }
+
+.asiatext{
+  width: 70%;
+  border: #d0ccce solid 1px;
+box-shadow: 2px 2px 2px gray;
+
+
+}
+.asiepic{
+  width: 300px;
+  height:350px ;
+  margin-left: 1000px;
+margin-bottom: -400px;
+box-shadow: 2px 2px 2px rgb(150, 150, 227);
+  
+}

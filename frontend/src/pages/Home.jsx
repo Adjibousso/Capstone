@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Infos from "./Info";
-import afrik1 from "../assets/images/afrik1.jpg"
+import afrik6 from "../assets/images/afrik6.jpg"
 import asia1 from "../assets/images/asia1.jpg"
 import europe1 from "../assets/images/europe1.jpg"
 import usa1 from "../assets/images/usa1.jpg"
@@ -29,7 +29,7 @@ const HomePage = () => {
 
 </div>
 
-<div><div><Link to={"/Afrique"}>Africa <br /><img src={afrik1} alt="" /></Link> </div>
+<div><div><Link to={"/Afrique"}>Africa <br /><img src={afrik6} alt="" /></Link> </div>
 </div>
 
 <div><Link to={"/NorthAmerica"}>North America <br /><img src={usa1} alt="" /></Link></div>
