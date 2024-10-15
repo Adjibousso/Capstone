@@ -4,8 +4,22 @@ import { Link } from 'react-router-dom';
 import { FaRibbon, FaSearch, FaSignInAlt, FaUserPlus, FaShoppingCart } from 'react-icons/fa';
 import { IconContext } from 'react-icons';
 import aware from '../assets/images/aware.jpg';
+import { auth } from './Firebase'; 
+import { signOut } from 'firebase/auth'; 
+import { useNavigate } from 'react-router-dom';
+import Logout from './Logout';
 
 const Navbar = () => {
+const navigate = useNavigate();
+  const handleLogout = async () => {
+    try {
+        await signOut(auth); // Sign out the user
+        console.log("User logged out successfully");
+        navigate('/'); // Redirect to the login or home page
+    } catch (error) {
+        console.error("Error logging out:", error.message);
+    }
+};
   return (
     <nav className="navbar">
       <div className="navbar-logo">
@@ -24,6 +38,7 @@ const Navbar = () => {
         <li><Link to="/signin"><FaSignInAlt /></Link></li>
         <li><Link to="/register"><FaUserPlus /></Link></li>
         <li><Link to="/cart"><FaShoppingCart /></Link></li>
+        <Logout/>
       </ul>
       <div className="navbar-search">
         <input type="text" placeholder="Search..." />

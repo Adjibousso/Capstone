@@ -3,7 +3,7 @@ import { auth } from './Firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import axios from "axios";
 import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 const Register = () => {
     const [username, setUsername] = useState('');
@@ -25,6 +25,7 @@ const Register = () => {
             await createUserWithEmailAndPassword(auth, email, password);
             const user = auth.currentUser;
             console.log(user);
+            window.location.href='/pages/Shop.js'
             toast.success("User created successfully", {
                 position: "top-center"
             });
