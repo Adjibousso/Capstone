@@ -7,9 +7,12 @@ import aware from '../assets/images/aware.jpg';
 import { auth } from './Firebase'; 
 import { signOut } from 'firebase/auth'; 
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from "react-redux";
+
 import Logout from './Logout';
 
 const Navbar = () => {
+  const products = useSelector(state => state.cart.products)
 const navigate = useNavigate();
   const handleLogout = async () => {
     try {
@@ -34,10 +37,16 @@ const navigate = useNavigate();
         <li><Link to="/shop">Shop</Link></li>
         <li><Link to="/services">Services</Link></li>
         <li><Link to="/contact">Contact</Link></li>
-        <li><Link to="/research">Research</Link></li>
         <li><Link to="/signin"><FaSignInAlt /></Link></li>
         <li><Link to="/register"><FaUserPlus /></Link></li>
-        <li><Link to="/cart"><FaShoppingCart /></Link></li>
+        <li><Link to="/cart"><FaShoppingCart />
+        {products.length > 0 && (
+                        <span className="cartItem">
+                      {products.length}
+                        </span>
+                    )}
+        
+        </Link></li>
         <Logout/>
       </ul>
       <div className="navbar-search">

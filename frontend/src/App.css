@@ -165,3 +165,27 @@ margin-bottom: -400px;
 box-shadow: 2px 2px 2px rgb(150, 150, 227);
   
 }
+
+.cartbag{
+  width: 600px;
+  align-items: center;
+  margin-left: 200px;
+  border: #555 2px solid;
+}
+.cartbagItem {
+
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: white;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+.checkout{
+  background-color: #d63384;
+}
+.totalprice{
+  font-weight: bold;
+  color: red;
+}
