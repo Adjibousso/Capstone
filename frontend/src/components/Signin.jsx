@@ -3,6 +3,8 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from './Firebase';
 import { toast,ToastContainer } from 'react-toastify';
 import {Navigate, useNavigate} from "react-router-dom";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const SignIn = () => {
   const [email, setEmail] = useState('');

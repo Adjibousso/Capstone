@@ -9,6 +9,7 @@ import ImageSlider from "../components/Imag";
 import images from "../components/Imag";
 import Afrique from "../pages/Afrique"
 import Asia from "../pages/Asia"
+import DonationPage from "../components/Donation";
 
 const HomePage = () => {
   return (
@@ -42,7 +43,7 @@ const HomePage = () => {
         <h2>How can we help? your story is really important to us</h2>
         <h3>Send us a message an one of our team will get back to you soon</h3>
         <ul>
-          <li>Donate to research initiatives</li>
+          <li>Donate to research initiatives <Link to={'/Donation'} >Donation</Link></li>
           <li>Participate in awareness events</li>
           <li>Support local charities</li>
         </ul>
