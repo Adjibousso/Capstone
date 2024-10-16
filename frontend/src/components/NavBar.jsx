@@ -7,6 +7,7 @@ import { signOut } from 'firebase/auth';
 import { auth } from './Firebase'; 
 import checkyourself from '../assets/images/checkyourself.gif';
 import Logout from './Logout';
+import { toast,ToastContainer } from 'react-toastify';
 
 const Navbar = () => {
   // state for cart products and search input
@@ -33,6 +34,7 @@ const Navbar = () => {
     try {
       await signOut(auth); // Sign out the user
       console.log("User logged out successfully");
+      toast.success('you are logged out successfully')
       navigate('/'); // Redirect to the login or home page
     } catch (error) {
       console.error("Error logging out:", error.message);
@@ -74,6 +76,7 @@ const Navbar = () => {
           />
           <button type="submit"><FaSearch /></button>
         </form>
+        <ToastContainer/>
       </div>
     </nav>
   );

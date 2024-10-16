@@ -21,6 +21,7 @@ const HomePage = () => {
         <div className="containerInfo">
         
       <Link to={"/Infos"}> <h3>About Breast cancer</h3> </Link> 
+      
              
         </div>
 
@@ -40,14 +41,18 @@ const HomePage = () => {
 <div><Link to={"/SouthAmerica"}> South America<br /><img src={europe1} alt="" /></Link></div>
 
 </div>
+<br />
 
-<ReactPlayer url={check} controls={true} playing={true}></ReactPlayer>
+
         <p>Breast cancer is one of the most common cancers among women worldwide. Early detection and treatment are crucial.</p>
       </section>
 {/* info  text */}
       <section className="support-section">
         <h2>How can we help? your story is really important to us</h2>
-        <h3>Send us a message an one of our team will get back to you soon</h3>
+        <h3>Send us a message an one of our team will get back to you soon</h3>  
+        <ReactPlayer url={check} controls={true} playing={true} width='300px' height='300px' className='reactplayerHome'></ReactPlayer>
+
+        
         <ul>
           <li>Donate to research initiatives <Link to={'/Donation'} >Donation</Link></li>
           <li>Participate in awareness events</li>

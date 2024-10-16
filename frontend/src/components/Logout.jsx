@@ -42,7 +42,7 @@ const Logout = () => {
             
             {isAuthenticated && (
                 <button onClick={handleLogout}>
-                    Logout
+                    Logout 
                 </button>
             )}
         </div>

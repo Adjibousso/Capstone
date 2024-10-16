@@ -12,9 +12,9 @@ return(
     <>
     <div className="afrikmedia">
 <ReactPlayer url={lisca} controls= {true} playing={true} width="100%"></ReactPlayer>
-<p>Afrikkk</p>
+
 <div>
-    <img src={afriStatic} alt="" />
+    <img src={afriStatic} alt=""  />
 </div>
 
 <div>
