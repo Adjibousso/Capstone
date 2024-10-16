@@ -5,8 +5,8 @@ const port = 3000
 const cors =require('cors')
 require("dotenv").config()
 const mongoose =require('mongoose')
-
-
+const connectDB= require('./config/db.js')
+//import connectDB from './config/db.js'
 
 app.use(cors())
 app.use(express.json())
@@ -33,7 +33,7 @@ app.post('/api/register',async (req,res)=> {
 
 app.post('/api/signin', (req, res) => {
     const { email, password } = req.body;
-    // Handle login logic here
+    
     res.json({ message: 'Login successful' });
 })
 
@@ -42,6 +42,8 @@ app.get('/', (req, res) => {
   res.send('Hello World! how are you?')
 })
 
+
+app.use('/api/users', require('./routes/user.js'));
 
 app.listen(port, () => {
   console.log(`App listening on port ${port}`)
