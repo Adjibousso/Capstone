@@ -5,7 +5,7 @@ import afrik6 from "../assets/images/afrik6.jpg"
 import asia1 from "../assets/images/asia1.jpg"
 import europe1 from "../assets/images/europe1.jpg"
 import usa1 from "../assets/images/usa1.jpg"
-import ImageSlider from "../components/Imag";
+// import ImageSlider from "../components/Imag";
 import images from "../components/Imag";
 import Afrique from "../pages/Afrique"
 import Asia from "../pages/Asia"
@@ -56,7 +56,7 @@ const HomePage = () => {
           <li><a href="https://www.nationalbreastcancer.org" target="_blank" rel="noopener noreferrer">National Breast Cancer Foundation</a></li>
         </ul>
       </section>
-      <ImageSlider><img src={images} alt="" /></ImageSlider>
+      {/* <ImageSlider><img src={images} alt="" /></ImageSlider> */}
       <footer className="footer">
         <p>© 2024 Breast Cancer Awareness. All rights reserved.</p>
       </footer>
