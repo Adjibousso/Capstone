@@ -6,6 +6,7 @@ const cors =require('cors')
 require("dotenv").config()
 const mongoose =require('mongoose')
 const connectDB= require('./config/db.js')
+const donationRoute =require('./routes/donateRoute.js')
 //import connectDB from './config/db.js'
 
 app.use(cors())
@@ -29,7 +30,7 @@ app.post('/api/register',async (req,res)=> {
     
 })
 
-
+app.use('/api', donationRoute);
 
 app.post('/api/signin', (req, res) => {
     const { email, password } = req.body;
