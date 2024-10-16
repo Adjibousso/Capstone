@@ -5,7 +5,7 @@ import { IconContext } from 'react-icons';
 import { useSelector } from "react-redux";
 import { signOut } from 'firebase/auth'; 
 import { auth } from './Firebase'; 
-import checkyourself2 from '../assets/images/checkyourself2.gif';
+import checkyourself from '../assets/images/checkyourself.gif';
 import Logout from './Logout';
 
 const Navbar = () => {
@@ -18,8 +18,8 @@ const Navbar = () => {
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchTerm.trim()) {
-      // Assuming you have a search results page, redirect to it
-      // navigate(`/search?query=${searchTerm}`);
+      
+      
     }
 
     if(searchTerm ==="africa"){
@@ -45,7 +45,7 @@ const Navbar = () => {
         <IconContext.Provider value={{ color: '#f72d92f3' }}>
           <FaRibbon className="logo-icon" />
         </IconContext.Provider>
-        <img src={checkyourself2} alt="logo" className="aware" />
+        <img src={checkyourself} alt="logo" className="aware" />
         <h3>Breast Cancer Awareness &nbsp;</h3>
       </div>
       <ul className="navbar-links">

@@ -4,6 +4,7 @@ import afrik6 from "../assets/images/afrik6.jpg";
 import lisca from "../assets/images/lisca.mp4"
 import ReactPlayer from "react-player";
 import usabc from '../assets/images/usabc.jpg'
+import YouTubePlayer from "react-player/youtube";
 
 const America =()=>{
 
@@ -90,6 +91,10 @@ Awareness is the first step in making informed choices about breast health. Dona
 
 </div>
         </div>
+<div className="youtubelink"> 
+    <ReactPlayer url="https://www.youtube.com/watch?v=atqywLmD75g&t=4s"></ReactPlayer>
+</div>
+        
         </>
     )
 }

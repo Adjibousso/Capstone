@@ -6,10 +6,11 @@ import asia1 from "../assets/images/asia1.jpg"
 import europe1 from "../assets/images/europe1.jpg"
 import usa1 from "../assets/images/usa1.jpg"
 // import ImageSlider from "../components/Imag";
-import images from "../components/Imag";
+import check from '../assets/images/check.mp4'
 import Afrique from "../pages/Afrique"
 import Asia from "../pages/Asia"
 import DonationPage from "../components/Donation";
+import ReactPlayer from "react-player";
 
 const HomePage = () => {
   return (
@@ -23,6 +24,9 @@ const HomePage = () => {
       <Link to={"/Infos"}> <h3>About Breast cancer</h3> </Link> 
              
         </div>
+
+
+        
         <div className="bycountry">
 <div> 
 <Link to={"/Asie"}>Asia <br /><img src={asia1} alt="" /></Link>

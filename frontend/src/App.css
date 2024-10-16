@@ -191,7 +191,29 @@ box-shadow: 2px 2px 2px rgb(150, 150, 227);
 }
 
 .usContainer{
-  width: 60%;
+  width: 50%;
   border: 1 solid bisque;
   background-color: #ff14910c;
+}
+
+.youtubelink{
+  width: 40%;
+  align-items: end;
+  margin-left: 750px;
+  margin-top: -2370px;
+  height: 900px;
+}
+
+.checkyhome {
+
+  width: fit-content;
+  border-radius: 50%;
+  display: block;
+  background-color: #d63384;
+  position: relative;
+  
+}
+.reactplayer{
+  position: relative;
+  border-radius: 50%;
 }

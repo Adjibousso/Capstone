@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements, useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
+import axios from 'axios';
 
+// Your Stripe public key
+const stripePromise = loadStripe('your-publishable-key-from-stripe');
 
 const DonationPage = () => {
   const [selectedAmount, setSelectedAmount] = useState(null);
   const [customAmount, setCustomAmount] = useState('');
+  const stripe = useStripe();
+  const elements = useElements();
 
   const suggestedAmounts = [10, 20, 50, 100, 200];
 
@@ -20,22 +27,41 @@ const DonationPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const donationAmount = selectedAmount || customAmount;
-  
+
     if (!donationAmount || donationAmount <= 0) {
       alert("Please enter a valid donation amount.");
       return;
     }
-  
+
+    if (!stripe || !elements) {
+      // Stripe.js has not loaded yet.
+      return;
+    }
+
     try {
-      const response = await axios.post('http://localhost:3000/api/donate', {
-        amount: donationAmount,
+      // Create a payment intent on the server
+      const { data: clientSecret } = await axios.post('http://localhost:3000/api/donate', {
+        amount: donationAmount * 100, // Stripe expects amounts in cents
       });
-      console.log('Donation successful:', response.data);
+
+      const result = await stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+          card: elements.getElement(CardElement),
+        },
+      });
+
+      if (result.error) {
+        console.error(result.error.message);
+        alert(result.error.message);
+      } else if (result.paymentIntent && result.paymentIntent.status === 'succeeded') {
+        console.log('Payment successful!');
+        alert('Thank you for your donation!');
+      }
     } catch (err) {
       console.error('Error processing donation:', err);
+      alert('Error processing donation.');
     }
   };
-  
 
   return (
     <div className="donation-page">
@@ -65,11 +91,22 @@ const DonationPage = () => {
         />
       </div>
 
-      <button className="donate-button" onClick={handleSubmit}>
-        Donate
-      </button>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="card-element">Card Details:</label>
+        <CardElement id="card-element" />
+        <button className="donate-button" type="submit">
+          Donate ${selectedAmount || customAmount}
+        </button>
+      </form>
     </div>
   );
 };
 
-export default DonationPage;
+// Wrap the DonationPage in the Elements provider to use Stripe
+const DonationPageWrapper = () => (
+  <Elements stripe={stripePromise}>
+    <DonationPage />
+  </Elements>
+);
+
+export default DonationPageWrapper;
