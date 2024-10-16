@@ -5,6 +5,7 @@ import aware1 from '../assets/images/aware1.png';
 import ReactPlayer from "react-player"; 
 import video from "../assets/images/video.mp4";
 import picture1 from "../assets/images/picture1.jpg"
+import checkyourself1 from '../assets/images/checkyourself1.gif'
 
 
 
@@ -20,19 +21,18 @@ const Info = () => {
         
         <div className="containerInfo">
        
-        <div className="videoaware">
-        <ReactPlayer url={video} controls={true}  playing={true} width="400px" alt="hello" ></ReactPlayer>
         
-         <img src={picture1} alt="" /> 
-        </div>
         <div className="displayV">
         <h3>What is breast cancer?</h3>
         <h4>A cancer that develops in the breast cells and progresses in stages. 
             Few early symptoms may include new lump in the underarm or in breast,
              itching or discharge from the nipples, and skin texture change of the nipple or breast.</h4>
-
-        
+             <div className="videoaware">
+        {/* video mp4 display */}
+             <ReactPlayer url={video} controls={true}  playing={true} width="800px" alt="hello" ></ReactPlayer>
+             </div>
              <h3>Causes:</h3>
+             {/* causes and risks */}
              <h4>The exact cause is not known.</h4>
 The risk factors include:
 <ul>
@@ -46,6 +46,7 @@ Environmental factors, including exposure to radiations
 Obesity and over weight</li>
 <li>Menarche: 
 having periods at younger age and menopause at an older age</li>
+<img src={picture1} alt="" />
 <li>Pregnancy:
  Becoming pregnant at an older age or never being pregnant
 Hormone use, including long-term contraceptive use or postmenopausal Hormone therapy</li>

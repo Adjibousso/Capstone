@@ -5,7 +5,6 @@ import afrik6 from "../assets/images/afrik6.jpg"
 import asia1 from "../assets/images/asia1.jpg"
 import europe1 from "../assets/images/europe1.jpg"
 import usa1 from "../assets/images/usa1.jpg"
-// import ImageSlider from "../components/Imag";
 import check from '../assets/images/check.mp4'
 import Afrique from "../pages/Afrique"
 import Asia from "../pages/Asia"
@@ -26,11 +25,11 @@ const HomePage = () => {
         </div>
 
 
-        
+        {/* link to differents country  */}
         <div className="bycountry">
 <div> 
 <Link to={"/Asie"}>Asia <br /><img src={asia1} alt="" /></Link>
-<p>Hello world</p>
+
 
 </div>
 
@@ -41,8 +40,11 @@ const HomePage = () => {
 <div><Link to={"/SouthAmerica"}> South America<br /><img src={europe1} alt="" /></Link></div>
 
 </div>
+
+<ReactPlayer url={check} controls={true} playing={true}></ReactPlayer>
         <p>Breast cancer is one of the most common cancers among women worldwide. Early detection and treatment are crucial.</p>
       </section>
+{/* info  text */}
       <section className="support-section">
         <h2>How can we help? your story is really important to us</h2>
         <h3>Send us a message an one of our team will get back to you soon</h3>
@@ -57,10 +59,11 @@ const HomePage = () => {
         <p>Find more information and support at:</p>
         <ul>
           <li><a href="" target="_blank" rel="noopener noreferrer"></a></li>
+          {/* link to breast cancer official website */}
           <li><a href="https://www.nationalbreastcancer.org" target="_blank" rel="noopener noreferrer">National Breast Cancer Foundation</a></li>
         </ul>
       </section>
-      {/* <ImageSlider><img src={images} alt="" /></ImageSlider> */}
+      
       <footer className="footer">
         <p>© 2024 Breast Cancer Awareness. All rights reserved.</p>
       </footer>

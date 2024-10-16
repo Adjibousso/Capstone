@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements, useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
 import axios from 'axios';
-
-// Your Stripe public key
-const stripePromise = loadStripe('your-publishable-key-from-stripe');
+import '../App.css'
+//  Stripe public key
+const stripePromise = loadStripe('pk_test_51QAbfBHysijKhCFRUybB08h2IjVqnrwBGz59XudqsrpIq8Y0WhismjOM1MSLZgnJDfJ9FTuh6GO5fVT3t9hEyi2P00PdNCcYGn');
 
 const DonationPage = () => {
   const [selectedAmount, setSelectedAmount] = useState(null);
@@ -41,7 +41,7 @@ const DonationPage = () => {
     try {
       // Create a payment intent on the server
       const { data: clientSecret } = await axios.post('http://localhost:3000/api/donate', {
-        amount: donationAmount * 100, // Stripe expects amounts in cents
+        amount: donationAmount * 100, 
       });
 
       const result = await stripe.confirmCardPayment(clientSecret, {
@@ -64,7 +64,7 @@ const DonationPage = () => {
   };
 
   return (
-    <div className="donation-page">
+    <div className="donationPage">
       <h2>Make a Donation</h2>
       <p>Select a suggested donation amount or enter your own:</p>
 

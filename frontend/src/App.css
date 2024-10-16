@@ -16,8 +16,8 @@
   margin-right: 0.5rem;
 }
 .aware{
-  width: 70px;
-  height: 60px;
+  width: 80px;
+  height: 70px;
   border-radius: 50%;
 }
 
@@ -105,9 +105,10 @@ a:hover {
   color: #555;
 }
 .containerInfo{
-  background-color: #ff14911f;
+  background-color: #f80b922b;
   display: flex;
   flex-direction: column;
+  width: 1300px;
 
 }
 .videoaware{
@@ -124,7 +125,7 @@ a:hover {
 .displayV{
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 900px;
   border: solid 1px rgb(205, 18, 114);
   box-shadow: 5px 5px 5px 5px rgb(235, 109, 161);
 }
@@ -133,6 +134,7 @@ a:hover {
   flex-direction: row;
   justify-content: space-around;
 }
+/* Home.jsx */
 .bycountry img{
 width: 300px;
 height: 200px;
@@ -149,7 +151,7 @@ box-shadow: 3px 4px 5px rgb(108, 14, 29);
   
   border-radius: 40%;
 }
-
+/* Asia styles */
 .asiatext{
   width: 70%;
   border: #d0ccce solid 1px;
@@ -165,7 +167,7 @@ margin-bottom: -400px;
 box-shadow: 2px 2px 2px rgb(150, 150, 227);
   
 }
-
+/* Cart.jsx */
 .cartbag{
   width: 600px;
   align-items: center;
@@ -185,6 +187,7 @@ box-shadow: 2px 2px 2px rgb(150, 150, 227);
 .checkout{
   background-color: #d63384;
 }
+
 .totalprice{
   font-weight: bold;
   color: red;
@@ -216,4 +219,27 @@ box-shadow: 2px 2px 2px rgb(150, 150, 227);
 .reactplayer{
   position: relative;
   border-radius: 50%;
+}
+/* donation.jsx */
+.donationPage{
+  width: 400px;
+  height: 300px;
+  justify-content: space-around;
+  align-items: flex-start;
+  border: 1px solid rgb(27, 4, 4);
+  background-color: #f8b4c144;
+}
+
+.self-gif{
+  width: 10px;
+  height: 50px;
+}
+
+#card-element{
+  height: 20px;
+  background-color: rgba(0, 255, 255, 0.06);
+}
+
+.donate-button{
+  margin-top: 30px;
 }
