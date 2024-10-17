@@ -36,7 +36,10 @@
 - I was trying to make the search bar active, and display whatever the user
  searched for but I finally did it with the (if else if) for a few words (country names)
 
- - Deployment: frontend is deployed with netilify and render
- and the backend is deployed with render
+  # Deployment:
+  - frontend: is deployed with both  netilify and render : 
+    -https://frontend-rz90.onrender.com/shop
+    -https://venerable-meerkat-107d79.netlify.app/
+ - the backend : is deployed with render
 
 - style again
