@@ -20,7 +20,8 @@ const SignIn = () => {
         position:"top-center"
 
       });
-      navigate('/Shop'); 
+      navigate('/Shop');
+      
     }catch(error){
       console.log(error.message);
       toast.error(error.message,{
