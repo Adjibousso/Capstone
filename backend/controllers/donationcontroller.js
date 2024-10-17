@@ -1,7 +1,7 @@
 // /controllers/donationController.js
 
 const Stripe = require('stripe');
-const stripe = Stripe(process.env.STRIPE_SECRET_KEY); // Add your Stripe Secret Key
+const stripe = Stripe(process.env.STRIPE_SECRET_KEY); 
 
 // Create a payment intent for donations
 const createDonation = async (req, res) => {
@@ -10,7 +10,7 @@ const createDonation = async (req, res) => {
   try {
     // Create a PaymentIntent with the amount and currency
     const paymentIntent = await stripe.paymentIntents.create({
-      amount: amount * 100, // Convert amount to cents
+      amount: amount * 100, 
       currency: 'usd',
     });
 

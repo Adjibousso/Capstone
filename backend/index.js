@@ -7,6 +7,7 @@ require("dotenv").config()
 const mongoose =require('mongoose')
 const connectDB= require('./config/db.js')
 const donationRoute =require('./routes/donateRoute.js')
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); 
 //import connectDB from './config/db.js'
 
 app.use(cors())
