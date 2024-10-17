@@ -8,6 +8,12 @@ const mongoose =require('mongoose')
 const connectDB= require('./config/db.js')
 const donationRoute =require('./routes/donateRoute.js')
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); 
+// Import user routes
+const userRoutes = require('./routes/user');
+
+// Middleware for user routes
+app.use('/api/users', userRoutes);
+
 
 
 //middleware 
@@ -43,17 +49,17 @@ app.post('/api/signin', (req, res) => {
 
 //test 
 app.get('/', (req, res) => {
-  res.send('Hello World! how are you?')
+  res.send('Tomorrow will be better')
 })
 
 //middleware 
-app.use('/api/users', require('./routes/user.js'));
+app.use('/api/user', require('./routes/user.js'));
 
 app.listen(port, () => {
   console.log(`App listening on port ${port}`)
   //mongoDB connection
   mongoose.connect(process.env.MONGO_URL)
   .then(()=>{
-    console.log("databse conntected")
+    console.log("databse is conntected")
   })
 })
