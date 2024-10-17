@@ -1,57 +1,21 @@
 const express = require('express');
+const { createUser, getUsers, getUserById, updateUser, deleteUser } = require('../controllers/usercontroller');
+
 const router = express.Router();
-const User = require('../models/user-model'); 
 
-// GET all users
-router.get('/', async (req, res) => {
-    try {
-        const users = await User.find(); 
-        res.json(users);
-    } catch (err) {
-        res.status(500).json({ message: 'Error fetching users', error: err });
-    }
-});
+// Create a new user
+router.post('/register', createUser);
 
-// GET user by ID
-router.get('/:id', async (req, res) => {
-    try {
-        const user = await User.findById(req.params.id); // fetch user by ID
-        if (!user) return res.status(404).json({ message: 'User not found' });
-        res.json(user);
-    } catch (err) {
-        res.status(500).json({ message: 'Error fetching user', error: err });
-    }
-});
+// Get all users
+router.get('/', getUsers);
 
-// PUT update user by ID
-router.put('/:id', async (req, res) => {
-    try {
-        const user = await User.findById(req.params.id);
-        if (!user) return res.status(404).json({ message: 'User not found' });
+// Get a single user by ID
+router.get('/:id', getUserById);
 
-        // Update user fields
-        user.name = req.body.name || user.name;
-        user.email = req.body.email || user.email;
-        user.password = req.body.password || user.password;
+// Update a user by ID
+router.put('/:id', updateUser);
 
-        const updatedUser = await user.save(); // Save updated user
-        res.json(updatedUser);
-    } catch (err) {
-        res.status(500).json({ message: 'Error updating user', error: err });
-    }
-});
-
-// DELETE user by ID
-router.delete('/:id', async (req, res) => {
-    try {
-        const user = await User.findById(req.params.id);
-        if (!user) return res.status(404).json({ message: 'User not found' });
-
-        await user.remove(); // Delete user
-        res.status(204).send(); 
-    } catch (err) {
-        res.status(500).json({ message: 'Error deleting user', error: err });
-    }
-});
+// Delete a user by ID
+router.delete('/:id', deleteUser);
 
 module.exports = router;
