@@ -32,7 +32,7 @@ const Register = () => {
                position: "top-center"
            });
 
-            await axios.post('http://localhost:3000/api/users', {
+            await axios.post('http://localhost:3000/api/register', {
                 username,
                 email,
                 password
