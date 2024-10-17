@@ -41,14 +41,16 @@ const SignIn = () => {
         onChange={(e) => setEmail(e.target.value)}
         required
       />
+      <br />
       <input
         type="password"
         placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         required
-      />
-      <button type="submit">Sign In</button>
+      /> <br />
+      <br />
+      <button type="submit" className='btnSignin'><b>Sign In</b></button>
     </form>
     <ToastContainer/>
     </div>

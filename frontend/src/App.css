@@ -247,6 +247,13 @@ border: 1px solid pink;
 border: 1px solid rgba(18, 1, 1, 0.001);
 }
 
+.donate{
+  background-color: #d63384;
+  color: black;
+  height: 30px;
+  width: 80px;
+}
+
 .donate-button{
   margin-top: 30px;
 }
@@ -254,4 +261,17 @@ border: 1px solid rgba(18, 1, 1, 0.001);
 .reactplayerHome{
   border-radius: 50%;
   margin-bottom: -300px;
+}
+
+.europe{
+  width: 80%;
+  
+}
+.btnSignin{
+  background-color: rgba(0, 0, 255, 0.633);
+  width: 150px;
+}
+
+.formregister{
+  justify-content: space-between;
 }

@@ -21,7 +21,7 @@ const HomePage = () => {
         <div className="containerInfo">
         
       <Link to={"/Infos"}> <h3>About Breast cancer</h3> </Link> 
-      
+     <div> <b>Your donation can save lives</b> <Link to={'/Donation'}  className="donate"><b>Donate!!</b></Link></div>
              
         </div>
 
@@ -38,7 +38,7 @@ const HomePage = () => {
 </div>
 
 <div><Link to={"/NorthAmerica"}>North America <br /><img src={usa1} alt="" /></Link></div>
-<div><Link to={"/SouthAmerica"}> South America<br /><img src={europe1} alt="" /></Link></div>
+<div><Link to={"/Europe"}> Europe<br /><img src={europe1} alt="" /></Link></div>
 
 </div>
 <br />
@@ -54,7 +54,7 @@ const HomePage = () => {
 
         
         <ul>
-          <li>Donate to research initiatives <Link to={'/Donation'} >Donation</Link></li>
+          <li>Donate to research initiatives <Link to={'/Donation'}  className="donate"><b>Donation</b></Link></li>
           <li>Participate in awareness events</li>
           <li>Support local charities</li>
         </ul>

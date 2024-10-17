@@ -48,7 +48,7 @@ const Register = () => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className='formregister'>
                 <h2>Register</h2>
                 <input
                     type="text"
@@ -81,8 +81,8 @@ const Register = () => {
                     onChange={(e) => setConfirmPassword(e.target.value)}
                     required
                 />
-                <br />
-                <button type="submit">Register</button>
+                <br /> <br />
+                <button type="submit" className='btnSignin'>Register</button>
             </form>
             <ToastContainer />
         </div>

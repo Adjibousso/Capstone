@@ -14,6 +14,8 @@ import Shop from './pages/Shop';
 import America from './pages/NorthAmerica';
 import SearchResults from './components/SearchBar';
 import Donation from './components/Donation';
+import Europe from './pages/Europe';
+import Services from './components/Services'
 
 
 
@@ -38,9 +40,8 @@ function App() {
         <Route path="/Cart" element={<Cart />} />
         <Route path="/NorthAmerica" element={<America />} />
         <Route path="/Donation" element={<Donation />} />
-
-
-        {/* <Route path="/services" element={<Services />} />  */}
+        <Route path="/Europe" element={<Europe />} />
+        <Route path="/services" element={<Services />} /> 
         {/* <Route path="/contact" element={<Contact />} />
          */}
       </Routes>
