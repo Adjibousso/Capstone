@@ -61,6 +61,7 @@ const Navbar = () => {
         <img src={aware} alt="logo" className="aware" />
         <h3>Breast Cancer Awareness &nbsp;</h3>
       </div>
+      {/* navigation bar links */}
       <ul className="navbar-links">
         <li><Link to="/">Home</Link></li>
         <li><Link to="/shop">Shop</Link></li>
@@ -68,6 +69,7 @@ const Navbar = () => {
         <li><Link to="/signin"><FaSignInAlt /></Link></li>
         <li><Link to="/register"><FaUserPlus /></Link></li>
         <li>
+          {/* link to shopping cart */}
           <Link to="/cart"><FaShoppingCart />
             {products.length > 0 && (
               <span className="cartItem">{products.length}</span>
@@ -76,6 +78,7 @@ const Navbar = () => {
         </li>
         <Logout />
       </ul>
+      {/* handle search   */}
       <div className="navbar-search">
         <form onSubmit={handleSearch}>
           <input
@@ -86,6 +89,7 @@ const Navbar = () => {
           />
           <button type="submit"><FaSearch /></button>
         </form>
+        {/* toastcontainer  */}
         <ToastContainer/>
       </div>
     </nav>
