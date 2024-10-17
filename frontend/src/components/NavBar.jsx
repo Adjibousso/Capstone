@@ -5,7 +5,7 @@ import { IconContext } from 'react-icons';
 import { useSelector } from "react-redux";
 import { signOut } from 'firebase/auth'; 
 import { auth } from './Firebase'; 
-import checkit from '../assets/images/checkit.jpg';
+import aware from '../assets/images/aware.jpg';
 import Logout from './Logout';
 import { toast,ToastContainer } from 'react-toastify';
 
@@ -58,7 +58,7 @@ const Navbar = () => {
         <IconContext.Provider value={{ color: '#f72d92f3' }}>
           <FaRibbon className="logo-icon" />
         </IconContext.Provider>
-        <img src={checkit} alt="logo" className="aware" />
+        <img src={aware} alt="logo" className="aware" />
         <h3>Breast Cancer Awareness &nbsp;</h3>
       </div>
       <ul className="navbar-links">

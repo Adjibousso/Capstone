@@ -4,7 +4,7 @@ import { Elements, useStripe, useElements, CardElement } from '@stripe/react-str
 import axios from 'axios';
 import '../App.css'
 
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+//const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 //  public key
 const stripePromise = loadStripe('pk_test_51QAbfBHysijKhCFRUybB08h2IjVqnrwBGz59XudqsrpIq8Y0WhismjOM1MSLZgnJDfJ9FTuh6GO5fVT3t9hEyi2P00PdNCcYGn');

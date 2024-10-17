@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from 'react-router-dom'
+import omeopathie from '../assets/images/omeopathie.gif'
 
 const Services= ()=>{
 
@@ -11,7 +12,9 @@ const Services= ()=>{
             <br />
             <br />
 <div><b>For mammograms book an appointment here:</b></div>
-
+{/* display image */}
+<img src={omeopathie} alt="" />
+{/* link to external website */}
 <a href="https://www.thechristhospital.com/services/womens-health/your-care-and-treatment/breast-health/online-scheduling"> Mammogram Appointment</a><br />
 <br />
 <h3><b>For more information :</b></h3>

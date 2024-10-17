@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    
+    "build": "parcel build index.html --detailed-report 1600",
     "lint": "eslint .",
     "preview": "vite preview"
   },
