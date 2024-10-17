@@ -11,6 +11,12 @@ const UserSchema =new mongoose.Schema(
     },
     // {collection:user-data}
 )
+// Create index on email field
+UserSchema.index({ email: 1 });
+
+// Or use compound index
+UserSchema.index({ email: 1, name: 1 });
+
 
 const UserModel = mongoose.model("User", UserSchema)
 
