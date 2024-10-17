@@ -14,7 +14,7 @@ const createDonation = async (req, res) => {
       currency: 'usd',
     });
 
-    // Send the client secret to the frontend
+    // Send the client secret 
     res.send({ clientSecret: paymentIntent.client_secret });
   } catch (error) {
     res.status(500).send({ error: error.message });

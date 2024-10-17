@@ -8,13 +8,14 @@ const mongoose =require('mongoose')
 const connectDB= require('./config/db.js')
 const donationRoute =require('./routes/donateRoute.js')
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); 
-//import connectDB from './config/db.js'
 
+
+//middleware 
 app.use(cors())
 app.use(express.json())
 
 
-
+// async funtion and route to register page
 app.post('/api/register',async (req,res)=> {
 
     console.log(req.body)
@@ -30,25 +31,27 @@ app.post('/api/register',async (req,res)=> {
     }
     
 })
-
+//midleware for donation 
 app.use('/api', donationRoute);
 
+//api post for sign-in
 app.post('/api/signin', (req, res) => {
     const { email, password } = req.body;
     
     res.json({ message: 'Login successful' });
 })
 
-
+//test 
 app.get('/', (req, res) => {
   res.send('Hello World! how are you?')
 })
 
-
+//middleware 
 app.use('/api/users', require('./routes/user.js'));
 
 app.listen(port, () => {
   console.log(`App listening on port ${port}`)
+  //mongoDB connection
   mongoose.connect(process.env.MONGO_URL)
   .then(()=>{
     console.log("databse conntected")
