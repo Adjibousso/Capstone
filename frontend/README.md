@@ -27,5 +27,8 @@ install toastify to display message if user is created or if there is and error
 create donation page
 install stripe to allow card payment
 style pages , delete things I started and was not able to finish
+I was trying to make the search bar active, and display whatever the user
+ searched for but I finally did it with the (if else if) for a few words (country names)
 
 
+style again

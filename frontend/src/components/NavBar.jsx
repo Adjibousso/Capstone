@@ -22,7 +22,7 @@ const Navbar = () => {
       
       
     }
-
+// search bar return link to the country typed
     if(searchTerm ==="africa"){
       navigate("/Afrique")
     }else if (searchTerm=== 'europe'){
@@ -89,7 +89,7 @@ const Navbar = () => {
           />
           <button type="submit"><FaSearch /></button>
         </form>
-        {/* toastcontainer  */}
+        {/* toastcontainer to display toastify message  */}
         <ToastContainer/>
       </div>
     </nav>

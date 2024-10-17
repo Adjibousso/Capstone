@@ -5,7 +5,7 @@ import { toast,ToastContainer } from 'react-toastify';
 import {Navigate, useNavigate} from "react-router-dom";
 import 'react-toastify/dist/ReactToastify.css';
 
-
+// sign in state initialization and authentication
 const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -20,7 +20,7 @@ const SignIn = () => {
         position:"top-center"
 
       });
-      navigate('/Shop');
+      navigate('/Shop'); 
     }catch(error){
       console.log(error.message);
       toast.error(error.message,{

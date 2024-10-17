@@ -6,13 +6,14 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-
+//  registration  state, initialization
 const Register = () => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
 
+// display error if password doesn't match else submit form
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -22,16 +23,16 @@ const Register = () => {
             });
             return;
         }
-
+// authentication
         try {
             await createUserWithEmailAndPassword(auth, email, password);
             const user = auth.currentUser;
             console.log(user);
-            
+            // display successfull message or error message
             toast.success("User created successfully", {
                position: "top-center"
            });
-
+//axios api register
             await axios.post('http://localhost:3000/api/register', {
                 username,
                 email,
@@ -48,6 +49,7 @@ const Register = () => {
 
     return (
         <div>
+            {/* form to submit  */}
             <form onSubmit={handleSubmit} className='formregister'>
                 <h2>Register</h2>
                 <input

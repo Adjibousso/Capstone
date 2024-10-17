@@ -6,7 +6,7 @@ import { signOut, onAuthStateChanged } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom'; 
 
 const Logout = () => {
-    // Track authentication state and initialize
+    // track authentication state and initialize
     const [isAuthenticated, setIsAuthenticated] = useState(false); 
     const navigate = useNavigate(); 
 
@@ -14,10 +14,10 @@ const Logout = () => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
-                // User is signed in
+                // user is signed in
                 setIsAuthenticated(true);
             } else {
-                // No user is signed in
+                // user not sign in 
                 setIsAuthenticated(false);
             }
         });
@@ -31,6 +31,7 @@ const Logout = () => {
         try {
             await signOut(auth); 
             console.log("User logged out successfully");
+            // navigate you to the home page if you log off
             navigate('/'); 
         } catch (error) {
             console.error("Error logging out:", error.message);
@@ -39,7 +40,7 @@ const Logout = () => {
 
     return (
         <div>
-            
+            {/*  log out event button */}
             {isAuthenticated && (
                 <button onClick={handleLogout}>
                     Logout 
